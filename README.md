@@ -43,7 +43,7 @@ Este proyecto a sido una mejora personal, basado en un ejercicio previo de un bo
 ### Clona el repositorio
 
    ```bash
-   git clone 
+   git clone git@github.com:jasSalvador/games_opinion.git
 
 ### Instalar dependencias:
 npm install
