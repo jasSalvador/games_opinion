@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="cont-gral">
     <div class="container pt-5">
-      <h1 class="text-info fw-bold text-center mx-auto">Juegos disponibles 🎮</h1>
+      <h1 class="text-light fw-bold text-center mx-auto">Juegos disponibles 🎮</h1>
       <div class="row justify-content-center align-items-top py-5 ">
         <div class="col-12 col-sm-10 col-md-6 col-lg-4 mb-3" v-for="game in games" :key="game.id">
           <CardComponent
@@ -90,5 +90,13 @@ export default Vue.extend({
 </script>
 
 <style>
-
+  .cont-gral {
+    /* background-color: rgb(6, 6, 78); */
+    background: #020024;
+background: linear-gradient(220deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  }
+  .cont-gral h1 {
+    font-size: 3.5rem;
+    filter: drop-shadow(6px 6px 4px rgba(155, 156, 156, 0.7));
+  }
 </style>
