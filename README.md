@@ -55,4 +55,5 @@ npm run serve
 La aplicación estará disponible en http://localhost:8080.
 
 ### Despliegue en producción
-La aplicación también está desplegada y disponible en https://gameopinion.netlify.app/ 
+La aplicación también está desplegada y disponible en 
+https://gameopinion.netlify.app/ 
