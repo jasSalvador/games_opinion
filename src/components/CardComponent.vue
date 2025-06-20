@@ -3,23 +3,23 @@
     :title="gameProps.name"
     tag="article"
     style="max-width: 20rem"
-    class="mb-2"
+    class="mb-2 game-card"
   >
     <template v-if="showOpinions">
       <!-- Bloque de opiniones y formulario -->
       <div class="d-flex flex-column gap-2">
-        <p class="fw-bold">Opiniones:</p>
+        <p class="fw-bold mb-0">Opiniones:</p>
 
-        <ul v-if="opinions.length" class="ps-3">
+        <ul v-if="opinions.length" class="ps-3 opinion-list">
           <li v-for="op in opinions" :key="op.id">
             <strong><span class="text-info">{{ op.name }}:</span> </strong> {{ op.description }}
           </li>
         </ul>
-        <p v-else>Aún no hay opiniones.</p>
+        <p v-else class=" opinion-list">Aún no hay opiniones.</p>
 
         <b-form @submit="onSubmit">
           <b-form-input v-model="form.name" placeholder="Tu nombre" required class="mb-2" />
-          <b-form-textarea v-model="form.opinion" placeholder="Tu opinión..." rows="3" required class="mb-2" />
+          <b-form-textarea v-model="form.opinion" placeholder="Tu opinión..." rows="2" required class="mb-2" />
           <b-button type="submit" variant="success" class="w-100">Agregar opinión</b-button>
         </b-form>
 
@@ -109,8 +109,17 @@ export default {
 .card {
   background-color: black;
   color: rgb(212, 212, 212);
+  height: 440px;
 }
 .card-img-top {
-  height: 200px;
+  height: 180px;
+}
+.card-title {
+  height: 50px;
+}
+.opinion-list {
+  height: 80px;
+  overflow-y: auto;
 }
 </style>
+
